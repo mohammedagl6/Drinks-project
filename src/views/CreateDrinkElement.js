@@ -3,7 +3,7 @@
 import appendChildren from "../utils/appendChildren.js";
 import createDOMElement from "../utils/createDOMElement.js";
 import { addClass } from "../utils/manageClass.js";
-
+import openDetailsPage from "../listeners/openDetailsPage.js";
 
 const CreateDrinkElement = (item) => {
     const drinkElement = createDOMElement('article');
@@ -20,6 +20,9 @@ const CreateDrinkElement = (item) => {
     drinkType.textContent = `(${item.strAlcoholic})`;
     appendChildren(drinkTitle, [drinkName, drinkType]);
     appendChildren(drinkElement, [drinkImage, drinkTitle]);
+
+    drinkElement.addEventListener('click', openDetailsPage);
+
     return drinkElement;
 }
 

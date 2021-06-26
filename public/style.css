@@ -38,6 +38,7 @@ ul {
 }
 a {
   text-decoration: none;
+  color: white;
 }
 
 h1,
@@ -129,8 +130,8 @@ p {
 .loading {
   display: grid;
   justify-content: center;
-  position: absolute;
-  top: 250px;
+  position: fixed;
+  top: 255px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -230,4 +231,52 @@ input::placeholder {
 .no-data{
   text-align: center;
   grid-column: 1/-1;
+}
+
+
+/********** details page **********/
+.details-page h2{
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+.details{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 3rem;
+  align-items: center;
+}
+.details img{
+  display: block;
+  width: 100%;
+}
+.details p{
+  line-height: 1.8;
+}
+.details-title{
+  color: white;
+  margin-right: 1rem;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #424242;
+}
+.btn-back{
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  color: white;
+  background-color: var(--clr-black);
+  border: 2px solid #424242;
+  padding: .45rem .8rem;
+  padding: .45rem .8rem;
+  font-size: .8rem;
+  display: inline-block;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  margin-left: 50%;
+}
+.btn-back:hover{
+  color: var(--clr-grey);
+  background-color: #424242;
 }

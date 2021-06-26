@@ -10,4 +10,4 @@
 
 export const API_MAIN_URL = 'https://www.thecocktaildb.com/api/json/v1/1/';
 export const USER_INTERFACE_ID = 'user-interface';
-export const NEXT_QUESTION_BUTTON_ID = 'next-question-button';
+export const DRINKS_CONTAINER_CLASS = '.drinks-container';

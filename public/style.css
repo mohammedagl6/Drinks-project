@@ -229,3 +229,7 @@ input::placeholder {
   color: #ccc;
   letter-spacing: 2px;
 }
+.no-data{
+  text-align: center;
+  grid-column: 1/-1;
+}

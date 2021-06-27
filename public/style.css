@@ -156,7 +156,7 @@ p {
   border-radius: var(--radius);
 }
 
-input {
+.form-control input {
   width: 100%;
   font-size: 1rem;
   border-color: transparent;
@@ -248,6 +248,7 @@ input::placeholder {
 .details img{
   display: block;
   width: 100%;
+  border-radius: 8px;
 }
 .details p{
   line-height: 1.8;
@@ -279,4 +280,25 @@ input::placeholder {
 .btn-back:hover{
   color: var(--clr-grey);
   background-color: #424242;
+}
+
+.filters{
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-column-gap: 1rem;*/
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.filter-item{
+ text-align: center;
+ padding: 5px; 
+}
+.filter-item input{
+  cursor: pointer;
+}
+.filter-item label{
+  cursor: pointer;
+  padding: 5px;
 }

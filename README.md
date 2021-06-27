@@ -26,7 +26,6 @@ src
 └── listeners
 └── utils
 └── views
-└── data.js
 index.html
 ```
 
@@ -37,49 +36,3 @@ index.html
 - `listeners` this contains our code that links up our handler code to the DOM. This is separate because it is possible to have the same handler code be given to different listeners
 - `utils` this contains code that are pure functions and can be used throughout the application. These functions take data and give back a result. They should not interact with anything outside of their scope!
 - `views` this contains code to define what the DOM will look like. They will create the DOM element and give it back. They should never read from/write to the dom, that is what the handlers do.
-- `data.js` this is our data model. Anything we need to store in the browser we place inside the data file
-
-# Backlog
-
-So what should be built? Below is a collection of user stories you can choose from. Stories inside of each priority level are not necessarily in order, it's up to your group to decide how they fit into your strategy. These are also just suggestion, feel free to change them or create your own! Feel free to get creative.
-
-## Must-Haves
-
-> these are necessary for basic usability
-
-- [ ] A user can see all questions
-  - _acceptance criteria ..._
-- [ ] A user can select an answer for each question
-  - _acceptance criteria ..._
-- [ ] A user can know which questions they got correct and incorrect
-  - _acceptance criteria ..._
-- [ ] A user can see the correct answer for questions
-  - _acceptance criteria ..._
-- [ ] A user can see their score at the end of the quiz
-  - _acceptance criteria ..._
-
-## Should-Haves
-
-> these will complete the user experience, but are not necessary
-
-- [ ] A user can see one question at a time, stepping through the quiz (may require refactoring)
-  - _acceptance criteria ..._
-- [ ] A user can see their score update in real-time as they select answers
-  - _acceptance criteria ..._
-
-## Could-Haves
-
-> would be really cool ... if there's time
-
-- [ ] A user can modify a question in the quiz
-  - _acceptance criteria ..._
-- [ ] A user has access to resources for further study on each question
-  - _acceptance criteria ..._
-- [ ] A user can "cheat" to see the correct answer, this forfeits the question
-  - _acceptance criteria ..._
-- [ ] A user can remove questions from the quiz
-  - _acceptance criteria ..._
-- [ ] A user can add questions to the quiz
-  - _acceptance criteria ..._
-
-

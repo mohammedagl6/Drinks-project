@@ -4,6 +4,7 @@ import appendChildren from "../utils/appendChildren.js";
 import createDOMElement from "../utils/createDOMElement.js";
 import { addClass } from "../utils/manageClass.js";
 import openDetailsPage from "../listeners/openDetailsPage.js";
+import openQuickView from "../listeners/openQuickView.js";
 
 const CreateDrinkElement = (item) => {
     const drinkElement = createDOMElement('article');
@@ -19,9 +20,14 @@ const CreateDrinkElement = (item) => {
     drinkName.textContent = item.strDrink;
     drinkType.textContent = `(${item.strAlcoholic})`;
     appendChildren(drinkTitle, [drinkName, drinkType]);
-    appendChildren(drinkElement, [drinkImage, drinkTitle]);
+
+    const quickView = createDOMElement('button', {attributes:{title:"Quick View"}});
+    addClass(quickView, 'quick-view-btn');
+
+    appendChildren(drinkElement, [drinkImage, drinkTitle, quickView]);
 
     drinkElement.addEventListener('click', openDetailsPage);
+    quickView.addEventListener('click', openQuickView);
 
     return drinkElement;
 }

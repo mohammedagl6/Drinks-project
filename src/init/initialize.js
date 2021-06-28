@@ -2,8 +2,9 @@
 
 import showMainPage from "../handlers/showMainPage.js";
 
-const initializeQuiz = () => {
+
+const initialize = () => {
     showMainPage();
 }
 
-window.addEventListener('load', initializeQuiz);
+window.addEventListener('load', initialize);

@@ -7,6 +7,7 @@ import fetchURL from "../utils/fetchURL.js";
 import hideLoading from "./hideLoading.js";
 import createDetailsPageDOM from "../views/createDetailsPageDOM.js";
 import showNoData from "./showNoData.js";
+import saveVisited from "./saveVisited.js";
 
 
 const openDetailsPageHandler = async (drinkId) => {
@@ -15,7 +16,11 @@ const openDetailsPageHandler = async (drinkId) => {
     if(data.drinks){
         const userInterface = getDOMElement(USER_INTERFACE_ID);
         clearDOMElement(userInterface);
-        userInterface.appendChild(createDetailsPageDOM(data.drinks[0]));
+
+        const visitedDrinks = JSON.parse(localStorage.getItem('visitedDrinks'));
+        console.log("open", visitedDrinks)
+        userInterface.appendChild(createDetailsPageDOM(data.drinks[0], visitedDrinks));
+        saveVisited(data.drinks[0]);
     }else{
         showNoData(".container");
     }

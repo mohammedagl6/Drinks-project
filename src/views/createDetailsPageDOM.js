@@ -4,8 +4,9 @@ import backToMain from "../listeners/backToMain.js";
 import appendChildren from "../utils/appendChildren.js";
 import createDOMElement from "../utils/createDOMElement.js";
 import { addClass } from "../utils/manageClass.js";
+import CreateDrinkElement from "./CreateDrinkElement.js";
 
-const createDetailsPageDOM =(data) => {
+const createDetailsPageDOM =(data, visitedDrinks) => {
     const detailsContainer = createDOMElement('section');
     addClass(detailsContainer, 'details-page');
     const detailsTitle = createDOMElement('h2');
@@ -47,6 +48,23 @@ const createDetailsPageDOM =(data) => {
     detailsContainer.appendChild(backBtn);
 
     backBtn.addEventListener('click', backToMain);
+
+    if(visitedDrinks){
+        console.log('visited creating', visitedDrinks);
+        const visitedContainer = createDOMElement('div');
+        const visitedHeading = createDOMElement('h3');
+        visitedHeading.textContent = "Drinks You have visited: ";
+        const drinksContainer = createDOMElement('section');
+        addClass(drinksContainer, 'drinks-container');
+        visitedDrinks.forEach(drink => {
+            if(drink.idDrink !== data.idDrink){
+                drinksContainer.appendChild(CreateDrinkElement(drink));
+            }
+        });
+        appendChildren(visitedContainer, [visitedHeading, drinksContainer]);
+        detailsContainer.appendChild(visitedContainer);
+    }
+
 
     return detailsContainer;
 

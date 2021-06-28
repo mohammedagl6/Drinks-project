@@ -282,7 +282,7 @@ input::placeholder {
   background-color: #424242;
 }
 
-.filters{
+.filters-category{
   /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-column-gap: 1rem;*/
@@ -301,4 +301,16 @@ input::placeholder {
 .filter-item label{
   cursor: pointer;
   padding: 5px;
+}
+.filters-alcohol{
+  position: absolute;
+  left: 5px;
+  margin-top: 1rem;
+}
+.filters-alcohol input{
+  transform: rotateZ(-90deg);
+  cursor: pointer;
+}
+.filters-alcohol label{
+  margin-left: -35%;
 }

@@ -7,6 +7,7 @@ import showNoData from "../handlers/showNoData.js";
 import {DRINKS_CONTAINER_CLASS} from "../constants.js";
 import addFilters from "./addFilters.js";
 import exportData from "./exportData.js";
+import addRangeFilter from "./addRangeFilter.js";
 
 
 const searchDrinkHandler = async (value) =>{
@@ -15,6 +16,7 @@ const searchDrinkHandler = async (value) =>{
         updateDrinks(data.drinks);
         exportData(data.drinks);
         addFilters(data.drinks);
+        addRangeFilter(data.drinks);
     }else{
         showNoData(DRINKS_CONTAINER_CLASS);
     }

@@ -5,6 +5,7 @@ import fetchURL from "../utils/fetchURL.js";
 import updateDrinks from "./updateDrinks.js";
 import addFilters from "./addFilters.js";
 import exportData from "./exportData.js";
+import addRangeFilter from "./addRangeFilter.js";
 
 
 const getRandomDrinks = async () => {
@@ -15,6 +16,7 @@ const getRandomDrinks = async () => {
         updateDrinks(data.drinks);
         exportData(data.drinks);
         addFilters(data.drinks);
+        addRangeFilter(data.drinks);
     }
 }
 

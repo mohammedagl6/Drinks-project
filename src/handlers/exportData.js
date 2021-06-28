@@ -1,9 +1,13 @@
 'use strict';
 
 export let drinksData;
+export let drinksDataFiltered;
+const exportData = (data, setBoth=true) => {
 
-const exportData = (data) => {
-    drinksData = data;
+    if(setBoth){
+        drinksData = data;
+    }
+    drinksDataFiltered = data;
 }
 
 export default exportData;

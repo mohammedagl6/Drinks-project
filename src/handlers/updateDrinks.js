@@ -6,7 +6,7 @@ import {DRINKS_CONTAINER_CLASS} from "../constants.js";
 import hideLoading from "./hideLoading.js";
 
 const updateDrinks = (data) => {
-    console.log(data);
+    console.log("updateDrinks:", data);
     const drinksContainer = document.querySelector(DRINKS_CONTAINER_CLASS);
     clearDOMElement(drinksContainer);
     data.forEach(item => {

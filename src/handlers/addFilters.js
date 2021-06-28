@@ -4,7 +4,7 @@ import clearDOMElement from "../utils/clearDOMElement.js";
 import createFilterElement from "../views/createFilterElement.js";
 
 const addFilters = (data) => {
-    const filtersContainer = document.querySelector('.filters');
+    const filtersContainer = document.querySelector('.filters-category');
     clearDOMElement(filtersContainer);
     const filterItems = [];
     data.forEach(drink => {
@@ -19,7 +19,6 @@ const addFilters = (data) => {
     //         }
     //         return filters;
     //     }, [] );
-
 }
 
 export default addFilters;

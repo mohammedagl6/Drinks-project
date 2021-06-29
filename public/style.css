@@ -390,3 +390,12 @@ input::placeholder {
   font-size: 2rem;
   cursor: pointer;
 }
+
+.details-page .drinks-container{
+  padding-top:1rem;
+}
+
+.visited-drinks{
+  padding-top: 4rem;
+  border-top: 1px solid;
+}

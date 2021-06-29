@@ -44,14 +44,13 @@ const createDetailsPageDOM =(data, visitedDrinks) => {
     const backBtn = createDOMElement('button');
     addClass(backBtn, 'btn-back');
     backBtn.textContent = "Back Home";
-
     detailsContainer.appendChild(backBtn);
 
     backBtn.addEventListener('click', backToMain);
 
     if(visitedDrinks){
-        console.log('visited creating', visitedDrinks);
         const visitedContainer = createDOMElement('div');
+        addClass(visitedContainer, 'visited-drinks');
         const visitedHeading = createDOMElement('h3');
         visitedHeading.textContent = "Drinks You have visited: ";
         const drinksContainer = createDOMElement('section');

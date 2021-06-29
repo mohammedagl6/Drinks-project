@@ -1,6 +1,6 @@
 'use strict';
 
-import createSearchFormDOM from "../views/createSearchFormDom.js";
+import createSearchFormDOM from "../views/createSearchFormDOM.js";
 
 
 const showSearchForm = () => {

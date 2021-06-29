@@ -381,6 +381,16 @@ input::placeholder {
   transform: translateY(2rem);
   border-radius: 8px;
 }
+@media screen and (max-width: 470px) {
+  .quick-view{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .quick-view-drink{
+    transform: translateY(0);
+  }
+}
 .quick-view-drink img{
   display: block;
   width: 95%;

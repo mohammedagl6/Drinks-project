@@ -20,8 +20,8 @@ const openDetailsPageHandler = async (drinkId) => {
         const visitedDrinks = JSON.parse(localStorage.getItem('visitedDrinks'));
         userInterface.appendChild(createDetailsPageDOM(data.drinks[0], visitedDrinks));
         saveVisited(data.drinks[0]);
-        document.body.scrollTop = 100; // For Safari
-        document.documentElement.scrollTop = 100; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 155; // For Safari
+        document.documentElement.scrollTop = 155; // For Chrome, Firefox, IE and Opera
     }else{
         showNoData(".container");
     }
